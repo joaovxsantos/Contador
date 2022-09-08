@@ -1,0 +1,59 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  outline: none;
+}
+
+body {
+  background: #3e82cd;
+}
+
+header,
+footer {
+  text-align: center;
+  color: white;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+h1::selection,
+footer::selection,
+a::selection {
+  background-color: rgb(255, 166, 0);
+  color: black;
+}
+
+section {
+  margin: auto;
+  background-color: white;
+  max-width: 65vh;
+  max-height: 50vh;
+  border-radius: 15px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  padding: 1rem;
+}
+
+a:visited {
+  color: white;
+}
+
+.first {
+  display: flex;
+  flex-direction: column;
+  width: 30vh;
+}
+
+label {
+  margin-top: 1vh;
+}
+
+[type="submit"] {
+  margin-top: 1rem;
+  width: 10vh;
+  padding: 2px;
+}
+
+p {
+  margin-top: 1rem;
+}
