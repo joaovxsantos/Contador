@@ -16,19 +16,36 @@ function cont() {
     } else {
 
         let iniciomv = parseInt(inicio.value)
+        let passo = Number(intervalo.value)
+        p.innerText = "Contando: "
 
-        p.innerText = ""
-        for (i = iniciomv; i < parseInt(fim.value); i++) {
+        if (passo > parseInt(fim.value)) {
+            alert('Passo inválido!')
+        }
+
+        if (passo <= 0) {
+            alert('Passo inválido! Considerando PASSO 1')
+            passo = 1
+        }
+
+        if (iniciomv < parseInt(fim.value)) {
+            for (i = iniciomv; i <= parseInt(fim.value); i += passo) {
 
 
-            iniciomv += parseInt(intervalo.value)
+                p.innerText += ` ${i} \u{1F449}`
 
-            if (iniciomv > fim.value) {
-                p.innerText += ""
-            } else {
-                p.innerText += `${iniciomv}.. 👉..  `
+            }
+        } else {
+
+            for (i = iniciomv; i >= parseInt(fim.value); i -= passo) {
+
+                p.innerText += ` ${i} \u{1F449}`
+
+
             }
         }
+        p.innerText += `\u{1F3C1}`
+
     }
 }
 
