@@ -2,11 +2,7 @@ let submit = document.querySelector('#submit')
 submit.addEventListener('click', cont)
 
 
-
-
-
-
-function cont(){
+function cont() {
 
 
     let inicio = document.querySelector('#inicio')
@@ -14,33 +10,29 @@ function cont(){
     let intervalo = document.querySelector('#intervalo')
     let p = document.querySelector('#p1')
 
-  if(inicio.value.length == 0  || fim.value.length == 0 || intervalo.value.length == 0 ){
+    if (inicio.value.length == 0 || fim.value.length == 0 || intervalo.value.length == 0) {
 
-    alert('Preencha todos os campos por favor!')
-}else{
+        alert('Preencha todos os campos por favor!')
+    } else {
 
-    let fimv = parseInt(inicio.value)
-    p.innerText = ""      
-    for (i = parseInt(inicio.value); i < parseInt(fim.value); i++){
-         
-        
-        fimv+= parseInt(intervalo.value) 
-        
-        if(fimv > fim.value){
-            p.innerText += ""
-        }else{
-            p.innerText += `${fimv}....  `
+        let iniciomv = parseInt(inicio.value)
+
+        p.innerText = ""
+        for (i = iniciomv; i < parseInt(fim.value); i++) {
+
+
+            iniciomv += parseInt(intervalo.value)
+
+            if (iniciomv > fim.value) {
+                p.innerText += ""
+            } else {
+                p.innerText += `${iniciomv}.. 👉..  `
+            }
         }
     }
-    
-
 }
 
 
-
-}
-
- 
 
 
 
